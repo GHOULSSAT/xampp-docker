@@ -10,8 +10,8 @@ docker start $CONTAINER_NAME > /dev/null 2> /dev/null || {
 	docker run \
 	       --detach \
 	       --tty \
-	       -p 8086:80 \
-	       -p 3386:3306 \
+	       -p 8080:80 \
+	       -p 8083:3306 \
 	       --name $CONTAINER_NAME \
 	       --mount "source=$CONTAINER_NAME-vol,destination=/opt/lampp/var/mysql/" \
 			$IMAGE_NAME
